@@ -12,6 +12,13 @@ import java.util.Map;
 
 @Service
 public class MapValidationErrorService {
+
+    /**
+     * Response Entity MapValidation Service Method
+     * returns HttpStatus.BAD_REQUEST
+     * @param result
+     * @return
+     */
     public ResponseEntity<?> MapValidationService(BindingResult result){
         if(result.hasErrors()){
             Map<String, String> errorMap = new HashMap<>();
